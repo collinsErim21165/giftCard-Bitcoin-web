@@ -5,15 +5,14 @@ import { getStorage, ref, uploadBytes, uploadBytesResumable, getDownloadURL } fr
 import { getFirestore } from 'firebase/firestore';
 import { getAuth, setPersistence, browserSessionPersistence } from 'firebase/auth';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAgc4UucaE2ZDRZMJCCJG2tMW_r0EQI4V4",
-  authDomain: "sell-giftcard-bitcoin.firebaseapp.com",
-  projectId: "sell-giftcard-bitcoin",
-  storageBucket: "sell-giftcard-bitcoin.appspot.com",
-  messagingSenderId: "54724809272",
-  appId: "1:54724809272:web:13c8ea02a3d3dc5eec8ccd",
-  measurementId: "G-6HCM4HKVR7"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
